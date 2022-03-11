@@ -1,1 +1,1 @@
-# fullstack_osa5
+# Bloglist frontend
