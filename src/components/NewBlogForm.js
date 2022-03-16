@@ -54,7 +54,7 @@ const NewBlogForm = ({ setError, setMessage, setBlogs,
     <form onSubmit={handleCreate}>
       <h2>Create new</h2>
       <div>
-             title:
+        <label>Title:</label>
         <input
           type="text"
           value={title}
@@ -63,7 +63,7 @@ const NewBlogForm = ({ setError, setMessage, setBlogs,
         />
       </div>
       <div>
-             author:
+        <label>Author:</label>
         <input
           type="text"
           value={author}
@@ -72,7 +72,7 @@ const NewBlogForm = ({ setError, setMessage, setBlogs,
         />
       </div>
       <div>
-             url:
+        <label>Url:</label>
         <input
           type="text"
           value={url}

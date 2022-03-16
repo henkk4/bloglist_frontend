@@ -6,9 +6,9 @@ import Blog from './Blog'
 
 test('renders content', () => {
   const blog = {
-    title: 'juhlat',
-    author: 'bile-ukko',
-    url: 'www.partyb.com',
+    title: 'cars',
+    author: 'John',
+    url: 'www.cars.com',
     likes: 3
   }
 
@@ -18,29 +18,25 @@ test('renders content', () => {
 
 
   expect(component.container).toHaveTextContent(
-    'juhlat'
+    'cars',
+    'John'
   )
-
-  expect(component.container).toHaveTextContent(
-    'bile-ukko'
-  )
-
 })
 
 
 
 test('renders all content', async () => {
   const blog = {
-    title: 'juhlat',
-    author: 'bile-ukko',
-    url: 'www.partyb.com',
+    title: 'cars',
+    author: 'John',
+    url: 'www.cars.com',
     likes: 3,
-    user: { name: 'seppoo' }
+    user: { name: 'Matt' }
   }
 
 
   const component = render(
-    <Blog blog={blog} usersName={'seppoo'}/>
+    <Blog blog={blog} usersName={'Matt'}/>
   )
 
   const button = component.getByText('view')
@@ -48,9 +44,9 @@ test('renders all content', async () => {
 
 
   expect(component.container).toHaveTextContent(
-    'juhlat',
-    'bile-ukko',
-    'www.partyb.com',
+    'cars',
+    'John',
+    'www.cars.com',
     '3'
   )
 

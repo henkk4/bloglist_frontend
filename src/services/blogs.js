@@ -21,7 +21,6 @@ const createBlog = async (newBlog) => {
 }
 
 const editBlog = async (editedBlog) => {
-  console.log(`/api/blogs/${editedBlog.id}`)
   const response = await axios.put(`/api/blogs/${editedBlog.id}`, editedBlog)
   return response.data
 }
