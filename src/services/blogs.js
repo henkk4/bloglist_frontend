@@ -1,5 +1,7 @@
 import axios from 'axios'
-const baseUrl = '/api/blogs'
+// eslint-disable-next-line no-undef
+const baseUrl = `${process.env.REACT_APP_API_URL}/api/blogs`
+
 
 let token = null
 const setToken = newToken => {
