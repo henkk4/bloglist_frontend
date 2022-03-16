@@ -1,5 +1,4 @@
 import axios from 'axios'
-// eslint-disable-next-line no-undef
 const baseUrl = `${process.env.REACT_APP_API_URL}/api/blogs`
 
 
@@ -23,7 +22,7 @@ const createBlog = async (newBlog) => {
 }
 
 const editBlog = async (editedBlog) => {
-  const response = await axios.put(`/api/blogs/${editedBlog.id}`, editedBlog)
+  const response = await axios.put(`${baseUrl}/${editedBlog.id}`, editedBlog)
   return response.data
 }
 
@@ -31,7 +30,7 @@ const deleteBlog = async (id) => {
   const config = {
     headers: { Authorization: token },
   }
-  const response = await axios.delete(`/api/blogs/${id}`, config)
+  const response = await axios.delete(`${baseUrl}/${id}`, config)
   return response.data
 }
 
